@@ -1,0 +1,3 @@
+Rosa: #fe218b
+Amarillo: #fed700
+Azul: #21b0fe
