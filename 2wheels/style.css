@@ -41,9 +41,9 @@ nav ul li a:hover {
 
 .premium {
     background: linear-gradient(
-    to right,
-    #BF953F 0%, #FCF6BA 25%, #B38728 50%,
-    #fe218b 50%, #fe218b 100%
+            to right,
+            #BF953F 0%, #FCF6BA 25%, #B38728 50%,
+            #fe218b 50%, #fe218b 100%
     );
     background-size: 200% 100%;
     background-position: 100% 0;
@@ -52,9 +52,11 @@ nav ul li a:hover {
     background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
-    transition: background-position 0.3s ease-in-out;
+    transition: background-position 0.3s ease-in-out, filter 0.3s ease-in-out;
+    filter: drop-shadow(0 0 0px transparent);
 }
 
 .premium:hover {
     background-position: 0 0;
+    filter: drop-shadow(0 0 8px rgba(252, 246, 186, 0.8));
 }

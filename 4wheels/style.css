@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    min-height: 200vh;
+    overflow-x: hidden;
+    background-image: url("fondo1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center 0px;
+    animation: movimientoFondo linear both;
+    animation-timeline: scroll();
+}
+
+@keyframes movimientoFondo {
+    from {
+        background-position: center 0%;
+    }
+    to {
+        background-position: center 20%;
+    }
+}
+
+.logo {
+    width: 15%;
+}
+
+nav {
+    background-color: #fed700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+nav ul {
+    margin-left: auto;
+    display: flex;
+    list-style: none;
+    padding-right: 50px;
+    gap: 60px;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-family: 'Ubuntu', sans-serif;
+    padding: 10px;
+    color: #fe218b;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #21b0fe;
+}
+
+.premium {
+    background: linear-gradient(
+            to right,
+            #BF953F 0%, #FCF6BA 25%, #B38728 50%,
+            #fe218b 50%, #fe218b 100%
+    );
+    background-size: 200% 100%;
+    background-position: 100% 0;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    transition: background-position 0.3s ease-in-out, filter 0.3s ease-in-out;
+    filter: drop-shadow(0 0 0px transparent);
+}
+
+.premium:hover {
+    background-position: 0 0;
+    filter: drop-shadow(0 0 8px rgba(252, 246, 186, 0.8));
+}
