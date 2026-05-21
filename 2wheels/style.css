@@ -1,15 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
+* {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    min-height: 200vh;
+    overflow-x: hidden;
+    background-image: url("fondo1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center 0px;
+    animation: movimientoFondo linear both;
+    animation-timeline: scroll();
+}
+
+@keyframes movimientoFondo {
+    from {
+        background-position: center 5%;
+    }
+    to {
+        background-position: center 100%;
+    }
+}
+
 .logo {
     width: 15%;
 }
 
 nav {
-    background-color: #fed700;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-right: 20px
+    padding-right: 20px;
 }
 
 nav ul {
@@ -25,8 +54,8 @@ nav ul li {
 }
 
 nav ul li a {
+    display: inline-block;
     text-decoration: none;
-    font-family: 'Ubuntu', sans-serif;
     padding: 10px;
     color: #fe218b;
     font-size: 20px;
@@ -37,6 +66,7 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #21b0fe;
+    transform: scale(1.1);
 }
 
 .premium {
@@ -47,16 +77,86 @@ nav ul li a:hover {
     );
     background-size: 200% 100%;
     background-position: 100% 0;
-
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
-    transition: background-position 0.3s ease-in-out, filter 0.3s ease-in-out;
+    transition: background-position 0.3s ease-in-out, filter 0.3s ease-in-out, transform 0.3s ease;
     filter: drop-shadow(0 0 0px transparent);
 }
 
 .premium:hover {
     background-position: 0 0;
     filter: drop-shadow(0 0 8px rgba(252, 246, 186, 0.8));
+    transform: scale(1.2);
+}
+
+.principal {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 45px;
+    padding: 30px;
+    max-width: 2000px;
+    margin: 0 auto;
+}
+
+.marcas {
+    border: 3px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(254, 33, 139, 0.2) 0%, rgba(33, 176, 254, 0.2) 100%);
+    backdrop-filter: blur(50px);
+    color: darkgray;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.15s ease;
+    font-size: 20px;
+}
+
+.marcas:hover {
+    border-color: #21b0fe;
+    transform: translateY(-15px);
+    opacity: 90%;
+    box-shadow: 0 15px 50px rgba(230, 57, 70, 0.2);
+    color: navajowhite;
+}
+
+.marcas img {
+    height: 150px;
+    margin-top: 10px;
+    transition: 0.3s ease;
+}
+
+.marcas img:hover {
+    transform: scale(1.25);
+}
+
+footer {
+    width: 100%;
+    padding: 0 20px 25px 20px;
+    background: transparent;
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-cont {
+    border: 3px solid rgba(255, 255, 255, 0.15);
+    border-radius: 60px;
+    background: linear-gradient(135deg, rgba(254, 33, 139, 0.2) 0%, rgba(33, 176, 254, 0.2) 100%);
+    backdrop-filter: blur(50px);
+    padding: 20px 40px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-cont p {
+    color: navajowhite;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin: 0;
+    white-space: nowrap;
 }
