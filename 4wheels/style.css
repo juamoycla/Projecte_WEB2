@@ -24,7 +24,7 @@ body {
         background-position: center 0%;
     }
     to {
-        background-position: center 20%;
+        background-position: center 50%;
     }
 }
 
@@ -54,8 +54,8 @@ nav ul li {
 }
 
 nav ul li a {
+    display: inline-block;
     text-decoration: none;
-    font-family: 'Ubuntu', sans-serif;
     padding: 10px;
     color: #fe218b;
     font-size: 20px;
@@ -66,6 +66,7 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #21b0fe;
+    transform: scale(1.1);
 }
 
 .premium {
@@ -80,13 +81,14 @@ nav ul li a:hover {
     background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
-    transition: background-position 0.3s ease-in-out, filter 0.3s ease-in-out;
+    transition: background-position 0.3s ease-in-out, filter 0.3s ease-in-out, transform 0.3s ease;
     filter: drop-shadow(0 0 0px transparent);
 }
 
 .premium:hover {
     background-position: 0 0;
     filter: drop-shadow(0 0 8px rgba(252, 246, 186, 0.8));
+    transform: scale(1.2);
 }
 
 .principal {
@@ -107,6 +109,7 @@ nav ul li a:hover {
     padding: 20px;
     text-align: center;
     transition: all 0.15s ease;
+    font-size: 20px;
 }
 
 .marcas:hover {
@@ -120,4 +123,40 @@ nav ul li a:hover {
 .marcas img {
     height: 150px;
     margin-top: 10px;
+    transition: 0.3s ease;
 }
+
+.marcas img:hover {
+    transform: scale(1.25);
+}
+
+footer {
+    width: 100%;
+    padding: 0 20px 25px 20px;
+    background: transparent;
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-cont {
+    border: 3px solid rgba(255, 255, 255, 0.15);
+    border-radius: 60px;
+    background: linear-gradient(135deg, rgba(254, 33, 139, 0.2) 0%, rgba(33, 176, 254, 0.2) 100%);
+    backdrop-filter: blur(50px);
+    padding: 20px 40px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-cont p {
+    color: navajowhite;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin: 0;
+    white-space: nowrap;
+ }
