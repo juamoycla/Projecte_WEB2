@@ -7,29 +7,36 @@
     <title>2&4wheels | Contacto</title>
 </head>
 <body>
-<main class="contenedor-main">
+    <main class="contenedor-main">
+        <div class="tarjeta-form">
+            <h1>Contacta con Nosotros</h1>
+            <p>Escribenos y te responderemos lo antes posible.</p>
+            <form method="POST" action="#">
+                <div class="grupo">
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
 
-    <div class="tarjeta-form">
-        <h1>Contacta con Nosotros</h1>
-        <p>Escribenos y te responderemos lo antes posible.</p>
-        <form method="POST" action="#">
-            <div class="grupo">
-                <label for="nombre">Nombre completo:</label>
-                <input type="text" id="nombre" name="nombre" required>
-            </div>
-            <div class="grupo">
-                <label for="email">Correo electrónico:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="grupo">
-                <label for="mensaje">Mensaje:</label>
-                <textarea id="mensaje" name="mensaje" rows="4" maxlength="300" required></textarea>
-            </div>
+                <div class="grupo">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
 
-            <button type="submit" class="btn-enviar">Enviar Mensaje</button>
-        </form>
-    </div>
+                <div class="grupo">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" maxlength="300" required></textarea>
+                </div>
+                <button type="submit" class="btn-enviar">Enviar Mensaje</button>
+
+                <a href="/4wheels/index.html" class="btn-volver">Volver a Inicio</a>
+            </form>
+        </div>
 
 </main>
 </body>
+<footer>
+    <div class="footer-cont">
+        <p>&copy;2026 Juan Moya Clavell. All rights reserved.</p>
+    </div>
+</footer>
 </html>
