@@ -7,15 +7,39 @@
     <title>2&4wheels</title>
 </head>
 <body>
-    <main class="contenedor-inicio">
-        <h1>Bienvenido a 2&4wheels</h1>
-        <p>Selecciona una modalidad</p>
+    <main class="contenedor-inicio main-flex">
 
-        <nav class="menu-nav">
-            <a href="/Projecte_WEB2/2wheels/index.html">2wheels</a>
-            <a href="/Projecte_WEB2/4wheels/index.html">4wheels</a>
-            <a href="/Projecte_WEB2/contacto/contacto.php" class="premium">Concacta con nosotros</a>
-        </nav>
+        <div id="vista-login" class="tarjeta-login">
+            <h1>Iniciar Sesión</h1>
+            <p>Introduce tus credenciales para acceder al panel.</p>
+
+            <p id="mensaje-error" class="error-txt" style="display: none;"></p>
+
+            <form id="form-login" onsubmit="intentarLogin(event)" >
+                <div class="grupo grupo-izquierda">
+                    <label for="username">Usuario:</label>
+                    <input type="text" id="username" required>
+                </div>
+                <div class="grupo grupo-izquierda">
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit" class="btn-enviar">Login</button>
+            </form>
+        </div>
+
+        <div id="vista-web" class="tarjeta-form texto-centrado" style="display: none;">
+            <h1>Bienvenido a 2&4wheels</h1>
+            <p>Selecciona una modalidad</p>
+
+            <nav class="menu-nav">
+                <a href="/Projecte_WEB2/2wheels/index.html">2wheels</a>
+                <a href="/Projecte_WEB2/4wheels/index.html">4wheels</a>
+                <a href="/Projecte_WEB2/contacto/contacto.php" class="premium">Concacta con nosotros</a>
+            </nav>
+
+            <button onclick="logout()" class="btn-logout">Logout</button>
+        </div>
     </main>
 </body>
 <footer>
@@ -23,4 +47,5 @@
         <p>&copy;2026 Juan Moya Clavell. All rights reserved.</p>
     </div>
 </footer>
+<script src="script.js"></script>
 </html>
