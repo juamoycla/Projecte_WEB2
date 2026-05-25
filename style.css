@@ -60,7 +60,7 @@ a {
     padding: 18px 0;
     text-align: center;
 
-    transition: transform 0.3s ease-in-out, border-color 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.2s ease-in-out, border-color 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
 }
 
@@ -71,11 +71,11 @@ a:hover {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
-.destaque {
+.premium {
     background: linear-gradient(135deg, rgba(33, 176, 254, 0.25) 0%, rgba(254, 33, 139, 0.1) 100%);
 }
 
-.destaque:hover {
+.premium:hover {
     border-color: #21b0fe;
 }
 

@@ -11,7 +11,7 @@ body {
     width: 100%;
     min-height: 100vh;
     color: white;
-    background-image: url('/2wheels/fondo1.jpg');
+    background-image: url('/Projecte_WEB2/2wheels/fondo1.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -140,7 +140,7 @@ p {
 
 .btn-volver:hover {
     color: #21b0fe;
-    transform: scale(1.2);
+    transform: scale(1.05);
 }
 
 footer {
