@@ -177,12 +177,14 @@ footer {
 }
 
 .mensaje-exito {
-    border: 3px solid rgba(46, 213, 115, 0.4);
+    border: 3px solid rgba(46, 213, 115, 1);
     border-radius: 20px;
-    background: linear-gradient(135deg, rgba(46, 213, 115, 0.15) 0%, rgba(10, 160, 80, 0.05) 100%);
+    background-color: rgba(30, 130, 76, 0.2);
+    background-image: linear-gradient(135deg, rgba(46, 213, 115, 0.40) 0%, rgba(11, 232, 129, 0.20) 100%);
     backdrop-filter: blur(80px);
-    color: navajowhite;
-    font-weight: 500;
+    -webkit-backdrop-filter: blur(80px);
+    color: darkgreen;
+    font-weight: 450;
     font-size: 1.05rem;
     letter-spacing: 0.5px;
     width: 100%;
@@ -190,8 +192,8 @@ footer {
     margin-bottom: 25px;
     text-align: center;
     box-sizing: border-box;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3), 0 0 20px rgba(46, 213, 115, 0.15);
-    animation: aparecer 0.5s ease-out both;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), 0 0 30px rgba(46, 213, 115, 0.3);
+    animation: aparecer 1s ease-out both;
 }
 
 @keyframes aparecer {

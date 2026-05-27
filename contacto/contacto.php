@@ -4,14 +4,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nombre = trim($_POST['nombre']);
     $email = trim($_POST['email']);
     $mensaje = trim($_POST['mensaje']);
-    $fecha_completa = date("Y-m-d H:i:s");
+    $fecha_completa = date("H:i:s | Y-m-d");
     $fecha_dia = date("Y-m-d");
 
-    $texto_registro = "========= MENSAJE $fecha_completa =========\n";
+    $texto_registro = "======= MENSAJE $fecha_completa =======\n";
     $texto_registro .= "Nombre: " . $nombre . "\n";
     $texto_registro .= "Email: " . $email . "\n";
     $texto_registro .= "Mensaje: " . $mensaje . "\n";
-    $texto_registro .= "-----------------------------------------------\n\n";
+    $texto_registro .= "---------------------------------------------\n\n";
 
     // ACTUALIZAR RUTAAAAAAAAAA!!!!!!!!! <<<<<<<<<-----------------------------------------------------------
     $archivo_txt = "C:\Users\practicasfp\Desktop\mensajes $fecha_dia.txt";
@@ -37,9 +37,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <p>Escribenos y te responderemos lo antes posible.</p>
 
             <?php if (isset($_GET['status']) && $_GET['status'] == 'success'): ?>
-                <div class="mensaje-exito">
-                    ¡Mensaje enviado correctamente!
-                </div>
+            <div class="mensaje-exito">
+                ¡Mensaje enviado correctamente!
+            </div>
             <?php endif; ?>
 
             <form method="POST" action="#">
