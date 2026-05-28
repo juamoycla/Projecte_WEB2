@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $texto_registro .= "Mensaje: " . $mensaje . "\n";
     $texto_registro .= "---------------------------------------------\n\n";
 
-    // ACTUALIZAR RUTAAAAAAAAAA!!!!!!!!! <<<<<<<<<-----------------------------------------------------------
+    // ACTUALIZAR RUTAAAAAAAAAA!!!!!!!!! <<<<<<<<<---------------------------------------------------------
     $archivo_txt = "C:\Users\practicasfp\Desktop\mensajes $fecha_dia.txt";
 
     file_put_contents($archivo_txt, $texto_registro, FILE_APPEND | LOCK_EX);
