@@ -159,4 +159,63 @@ footer {
     letter-spacing: 0.5px;
     margin: 0;
     white-space: nowrap;
- }
+}
+
+@media (max-width: 992px) {
+    nav ul {
+        gap: 30px;
+        padding-right: 20px;
+    }
+
+    .principal {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 650px) {
+    nav {
+        flex-direction: column;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .logo {
+        width: auto;
+        height: 200px;
+    }
+
+    nav ul {
+        margin: 0 auto;
+        padding-right: 0;
+        gap: 20px;
+    }
+
+    nav ul li a {
+        font-size: 18px;
+    }
+
+    .principal {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .marcas {
+        font-size: 18px;
+        padding: 15px;
+    }
+
+    .marcas img {
+        height: 120px;
+    }
+
+    .footer-cont {
+        padding: 15px 25px;
+    }
+
+    .footer-cont p {
+        white-space: normal;
+        font-size: 13px;
+    }
+}
